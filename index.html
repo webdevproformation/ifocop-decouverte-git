@@ -22,10 +22,48 @@
                 box-sizing: border-box;  les 2px soient INCLUS dans les 25% !! 
               */
         }
+        header{
+            display:flex;
+            align-items: center;
+        }
+        .burger span{
+            width: 40px;
+            height: 5px;
+            margin: 3px 0;
+            display: block;
+            background: #000;
+            cursor: pointer;
+        }
+        .top{
+            margin-bottom: 20px;
+        }
+        header ul{
+            margin: 0 0 0 30px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        header ul li{
+         margin-right: 20px;
+        }
+        .masquer{
+            display: none;
+        }
     </style>
 </head>
 <body>
     <h1>Bonjour je découvre git</h1>
+    <header class="top">
+        <div class="burger">
+            <span></span><span></span><span></span>
+        </div>
+        <ul>
+            <li>Lorem.</li>
+            <li>Recusandae!</li>
+            <li>Omnis.</li>
+            <li>Exercitationem!</li>
+        </ul>
+    </header>
     <div class="diaporama">
         <header>
             <img src="https://source.unsplash.com/random/500x200" alt="">
@@ -45,7 +83,10 @@
                 $("header img").attr("src", url);
             })
         }
-        console.log("test")
+        
+        $(".burger").on("click", function(){
+            $("header ul").toggleClass("masquer")
+        })
     </script>
 </body>
 </html>
