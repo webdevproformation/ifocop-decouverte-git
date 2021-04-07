@@ -19,5 +19,14 @@
             <img src="https://source.unsplash.com/random/500x203" alt="">
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        for(let i = 0 ; i < 4 ; i++){
+            $(".miniatures img").eq(i).click(function(){
+                let url = $(".miniatures img").eq(i).attr("src");
+                $("header img").attr("src", url);
+            })
+        }
+    </script>
 </body>
 </html>
