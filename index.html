@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .diaporama{
+            width:500px;
+        }
+        .miniatures{
+            display: flex;
+        }
+        .miniatures img{
+            width:25%;
+            border:2px solid green;
+            box-sizing: border-box; 
+            /* cette règle permet éviter que la navigateur
+                25% x 4 = 100%
+                (2px + 2px ) x 4 = 16px
+                box-sizing: border-box;  les 2px soient INCLUS dans les 25% !! 
+              */
+        }
+    </style>
 </head>
 <body>
     <h1>Bonjour je découvre git</h1>
@@ -21,7 +39,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        for(i = 0 ; i < 4 ; i++){
+        for(let i = 0 ; i < 4 ; i++){
             $(".miniatures img").eq(i).click(function(){
                 let url = $(".miniatures img").eq(i).attr("src");
                 $("header img").attr("src", url);
