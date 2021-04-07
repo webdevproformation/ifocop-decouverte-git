@@ -38,7 +38,7 @@
             margin-bottom: 20px;
         }
         header ul{
-            margin: 0 0 0 30px;
+           
             padding: 0;
             list-style: none;
             display: flex;
@@ -46,9 +46,32 @@
         header ul li{
          margin-right: 20px;
         }
-        .masquer{
-            display: none;
+
+
+       
+
+       
+
+        @media screen and (min-width:500px){
+            .burger{
+                display: none;
+            }
+           
         }
+
+        @media screen and (max-width:500px){
+            header ul{
+                display: none;
+            }
+            header {
+                display: block;
+            }
+            .masquer{
+                display: block;
+            }
+        }
+
+       
     </style>
 </head>
 <body>
@@ -86,7 +109,8 @@
         
         $(".burger").on("click", function(){
             $("header ul").toggleClass("masquer")
-        })
+        });
+        // rdv 16h00 !! 
     </script>
 </body>
 </html>
